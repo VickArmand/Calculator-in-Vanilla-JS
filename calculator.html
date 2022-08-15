@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<script type="text/javascript">
+	function modulus(){
+			var a= eval(document.getElementById("value1").value);
+
+			var b= eval(document.getElementById("value2").value);
+			if(document.getElementById("value1").value.length==0||document.getElementById("value2").value.length==0){
+				alert("Please fill in the two numbers for proper computation");
+			}
+			else if(b==0){
+				alert("There is no modulus of zero");
+			}
+			else{
+				var d=a%b;
+				document.forms[0].elements[2].value=d;
+			}
+		}
+	
+
+		function multiply(){
+			var a= eval(document.getElementById("value1").value);
+
+			var b= eval(document.getElementById("value2").value);
+			
+			if(document.getElementById("value1").value.length==0||document.getElementById("value2").value.length==0){
+				alert("Please fill in the two numbers for proper computation");
+			}
+			else{
+				var d=a*b;
+				document.forms[0].elements[2].value=d;
+			}
+		}
+		function sum(){
+			var a= eval(document.getElementById("value1").value);
+
+			var b= eval(document.getElementById("value2").value);
+			if(document.getElementById("value1").value.length==0||document.getElementById("value2").value.length==0){
+				alert("Please fill in the two numbers for proper computation");
+			}
+			else{
+				var d=a+b;
+		document.getElementById("result").value=d;
+			}
+		
+		}
+		function minus(){
+			var a= eval(document.getElementById("value1").value);
+
+			var b= eval(document.getElementById("value2").value);
+			if(document.getElementById("value1").value.length==0||document.getElementById("value2").value.length==0){
+				alert("Please fill in the two numbers for proper computation");
+			}
+			else{
+			var d=a-b;
+		document.getElementById("result").value=d;	
+			}
+		
+		}
+		function divide(){
+			var a= eval(document.getElementById("value1").value);
+
+			var b= eval(document.getElementById("value2").value);
+			if(document.getElementById("value1").value.length==0||document.getElementById("value2").value.length==0){
+				alert("Please fill in the two numbers for proper computation");
+			}
+			else if(b==0){
+				alert("Division by zero error");
+			}
+			else{
+				var d=a/b;
+		document.getElementById("result").value=d;
+			}
+		
+		}
+
+
+		function square(){
+		var a = eval(document.getElementById("value3").value);
+if(document.getElementById("value3").value.length==0){
+				alert("Please fill in a number for proper computation");
+			}
+			else{
+				var d=a**2;
+		document.getElementById("result2").value=d;
+			}
+		
+		}
+		function squareroot(){
+				var a= eval(document.getElementById("value3").value);
+if(document.getElementById("value3").value.length==0){
+				alert("Please fill in a number for proper computation");
+			}
+			else{
+
+				if(a<0){
+				alert("There is no squareroot of a negative number");
+			}
+		else{
+			d=Math.sqrt(a);
+		document.getElementById("result2").value=d;
+		}
+			}
+			
+
+
+		}
+</script>
+<link rel="stylesheet" href="includes/css/bootstrap.css">
+
+</head>
+<body  style="background: grey;">
+	<div class="container">
+		<div class="row">
+		<div class="col-lg-6 m-auto">	
+		<div class="card">
+		<div class="card-title bg-primary text-white mt-3">
+				<h3 class="text-center py-2">CALCULATOR</h3>
+			</div>
+			<div class="card-body">
+<form>
+	<div class="form-group">
+	Enter the first number: <input type="text" id="value1" name="value1" class="form-my-control my-2 " >
+	</div>
+	<div class="form-group">
+	Enter the second number: <input type="text" id="value2" name="value2" class="form-my-control my-2 ">
+	</div>
+	<div class="form-group">
+	Result: <input type="text" id="result" name="result" class="form-my-control my-2">
+</div>
+	<input type="button" class="btn btn-primary form-my-control my-2" onclick="sum()" name="submit" value="+">
+<input type="button" class="btn btn-secondary" onclick="multiply()" name="submit" value="X">
+
+<input type="button" class="btn btn-warning" onclick="minus()" name="submit" value="-">
+
+<input type="button" class="btn btn-info" onclick="divide()" name="submit" value="/">
+<input type="button" class="btn btn-secondary" onclick="modulus()" name="submit" value="MOD">
+
+</form>
+</div>
+
+	<div class="card-body ">			
+<form>
+	<div class="form-group">
+	Enter a number:<input type="text" id="value3" name="value3" class="form-my-control my-2">
+	</div>
+	<div class="form-group">
+	Result: <input type="text" id="result2" name="result2" class="form-my-control my-2">
+</div>
+<input type="button" class="btn btn-success" onclick="square()" name="submit" value="SQUARE">
+
+<input type="button"  class="btn btn-danger" onclick="squareroot()" name="submit" value="SQUAREROOT">
+
+</form>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
